@@ -13,5 +13,5 @@ jobs:
       - name: run simple shell
         run: |
          echo "hello "
-         echo " ${secret.DATABRICKS_NAME} "
+         echo " ${{ secrets.DATABRICKS_NAME }} "
          
