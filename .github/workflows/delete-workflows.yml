@@ -1,6 +1,7 @@
 name: Delete Workflows
 
-on: [workflow_dispatch]
+#on: [workflow_dispatch]
+on: push
 
 env:
   adbneme: ${secret.DATABRICKS_NAME}
@@ -13,5 +14,5 @@ jobs:
       - name: run simple shell
         run: |
          echo "hello "
-         echo " ${{ secrets.DATABRICKS_NAME }} "
+         echo " ${{ vars.DATABRICKS_NAME }} "
          
