@@ -2,13 +2,11 @@ name: Delete Workflows
 
 on: [workflow_dispatch]
 
+
 jobs:
   do:
     runs-on: ubuntu-latest
     steps:
-      - name: Delete workflow runs
-        uses: Mattraks/delete-workflow-runs@v2.0.3
-        with:
-          retain_days: 0
-          keep_minimum_runs: 0
-          
+      - name: run simple shell
+        run: |
+         echo "hello "
